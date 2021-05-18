@@ -8,7 +8,7 @@ const ThemeProvider = ({children}) => {
 
 
     return(
-        <ThemeContext.Provider value={context.theme}>
+        <ThemeContext.Provider value={context}>
             {children}
         </ThemeContext.Provider>
     )
