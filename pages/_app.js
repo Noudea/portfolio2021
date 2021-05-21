@@ -1,4 +1,4 @@
-import Layout from '../layout/layout'
+import Layout from '../layout/Layout'
 import GeneralProvider from '../provider/GeneralProvider'
 import '../styles/globals.css'
 

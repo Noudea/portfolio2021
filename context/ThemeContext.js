@@ -5,7 +5,9 @@ const ThemeContext = React.createContext({
     theme : ThemeColors.dark,
     setTheme : () => {},
     colors : 'test',
-    setColors : () => {}
+    setColors : () => {},
+    grid : false,
+    setGrid : () => {}
 })
 
 export default ThemeContext
