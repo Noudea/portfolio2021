@@ -15,22 +15,23 @@ const Grid = () => {
     return(<div className='gridContainer'>
             <style jsx>{`
                 .gridContainer {
-                    position: absolute;
+                    position: fixed;
                     z-index: -1;
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
-                    width: calc(100% - (150px * 2));
-                    height: 100%;
-                    left: 150px;
+                    width: 80vw;
+                    height: 100vh;
                 }
 
                 `}</style>
+            <Line active={true}/>
             <Line active={grid}/>
             <Line active={grid}/>
             <Line active={grid}/>
             <Line active={grid}/>
             <Line active={grid}/>
+            <Line active={true}/>
     </div>)
 }
 

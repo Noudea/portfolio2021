@@ -1,13 +1,14 @@
 import { useContext } from 'react'
 
 import Background from "../components/background/Background"
+import ColorSwitcher from '../components/switcher/ColorSwitcher'
 import GridSwitcher from "../components/switcher/GridSwitcher"
 import SwitchButton from "../components/switcher/SwitchButton"
 import ThemeContext from "../context/ThemeContext"
 
 const Layout = ({children}) => {
 
-    const theme = useContext(ThemeContext).theme
+    const themeColors = useContext(ThemeContext).theme
 
 
     return(<>
@@ -40,20 +41,21 @@ const Layout = ({children}) => {
 
         <style jsx global>{`
             body {
-                background-color:${theme.main};
+                background-color:${themeColors.main};
                 animation-name: fade;
                 animation-duration: 2s;
                 animation-fill-mode: forwards;
                 transition-duration: 0.5s;
             }
             h1,p {
-                color:white;
+                color:${themeColors.inverted};
             }
         `}</style>
 
 
     <Background></Background>
     <div className='toolContainer'>
+        <ColorSwitcher></ColorSwitcher>
         <GridSwitcher></GridSwitcher>
         <SwitchButton></SwitchButton>
     </div>
