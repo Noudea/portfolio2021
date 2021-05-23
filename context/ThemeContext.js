@@ -4,8 +4,8 @@ import ThemeColors from '../theme/ThemeColors'
 const ThemeContext = React.createContext({
     theme : ThemeColors.dark,
     setTheme : () => {},
-    colors : ThemeColors.colors,
-    setColors : () => {},
+    color : ThemeColors.colors.red,
+    setColor : () => {},
     grid : false,
     setGrid : () => {}
 })

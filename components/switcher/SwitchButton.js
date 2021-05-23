@@ -5,6 +5,7 @@ import ThemeColors from '../../theme/ThemeColors'
 const SwitchButton = () => {
 
     const {theme,setTheme} = useContext(ThemeContext)
+    const {color,setColor} = useContext(ThemeContext)
     
     const toggleSwitch = () => {
         const localStorage =  window.localStorage
@@ -36,7 +37,7 @@ const SwitchButton = () => {
                 border-radius: 50px;
                 width: 70px;
                 height: 32px;
-                background: red;
+                background: ${color};
                 transition-duration: 0.5s;
             }
 

@@ -6,11 +6,11 @@ const ThemeProvider = ({children}) => {
 
     // const context = useContext(ThemeContext)
     const [theme,setTheme] = useState(ThemeColors.dark)
-    const [colors,setColors] = useState(ThemeColors.colors)
+    const [color,setColor] = useState(ThemeColors.colors.red)
     const [grid,setGrid] = useState(true)
 
 
-    useEffect(() => {
+    useEffect(async() => {
 
         const localStorage =  window.localStorage
 
@@ -22,16 +22,20 @@ const ThemeProvider = ({children}) => {
             setTheme(ThemeColors[localStorage.getItem('theme')])
         }
 
-        console.log(window.localStorage.getItem('theme'))
+        if(!localStorage.getItem('mainColor')) {
+            localStorage.setItem('mainColor',color)
+        }
 
-
+        if(localStorage.getItem('mainColor')) {
+            setColor(localStorage.getItem('mainColor'))
+        }
     }, [])
     
     const context = {
         theme,
         setTheme,
-        colors,
-        setColors,
+        color,
+        setColor,
         grid,
         setGrid
     }

@@ -9,7 +9,7 @@ import ThemeContext from "../context/ThemeContext"
 const Layout = ({children}) => {
 
     const themeColors = useContext(ThemeContext).theme
-
+    const color = useContext(ThemeContext).color
 
     return(<>
     <style jsx>{`

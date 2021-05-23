@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect , useContext } from 'react'
 
 import ThemeContext from "../context/ThemeContext"
 import ThemeProvider from "./ThemeProvider"
 
 
 const GeneralProvider = ({children}) => {
+
     return(
         <ThemeProvider>
             {children}
