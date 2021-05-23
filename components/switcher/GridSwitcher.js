@@ -27,7 +27,13 @@ const GridSwitcher = () => {
 
             .switchContainer {
                 display:flex;
+                flex-direction: column;
             }
+            @media screen and (min-width: 768px) {
+            .switchContainer {
+                flex-direction:row;
+            }
+        }
             
             `}</style>
             <p>GRID</p>

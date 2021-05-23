@@ -138,8 +138,6 @@ const ColorSwitcher = () => {
         <div onClick={setColorRed} className={color == colors.red? 'palette red active' : 'palette red'}></div>
         <div onClick={setColorOrange} className={color == colors.orange ? 'palette orange active' : 'palette orange'}></div>
         <p>{color}</p>
-        <p>{colors.orange}</p>
-        {color == colors.orange ? <p>dsqdqsdqs</p> : <p>null</p>}
     </div>
   </>)
 };
