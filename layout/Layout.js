@@ -68,7 +68,7 @@ const Layout = ({children}) => {
                 animation-fill-mode: forwards;
                 transition-duration: 0.5s;
             }
-            h1,h2,h3,p {
+            h1,h2,h3,p,a {
                 color:${themeColors.inverted};
             }
             span {
