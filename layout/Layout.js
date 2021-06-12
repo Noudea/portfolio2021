@@ -1,7 +1,8 @@
-import { useContext , useEffect } from 'react'
+import { useContext , useEffect , useState } from 'react'
 
 import Background from "../components/background/Background"
 import ColorSwitcher from '../components/switcher/ColorSwitcher'
+import ColorSwitcherV2 from '../components/switcher/ColorSwitcherV2'
 import GridSwitcher from "../components/switcher/GridSwitcher"
 import SwitchButton from "../components/switcher/SwitchButton"
 import ThemeContext from "../context/ThemeContext"
@@ -15,14 +16,18 @@ const Layout = ({children}) => {
 
     const themeColors = useContext(ThemeContext).theme
     const color = useContext(ThemeContext).color
-
+    const [screenWidth,setScreenWidth] = useState('')
         useEffect(() => {
+            console.log(window.screen.width)
+
+            setScreenWidth(window.screen.width)
+            console.log(screenWidth)
             AOS.init({
             easing: "ease",
             once: false,
             duration : 800
             });
-        }, []);
+        }, [screenWidth]);
 
 
     return(<>
@@ -80,7 +85,7 @@ const Layout = ({children}) => {
 
     <Background></Background>
     <div className='toolContainer'>
-        <ColorSwitcher></ColorSwitcher>
+        {screenWidth > 768 ? <ColorSwitcherV2></ColorSwitcherV2> : <ColorSwitcher></ColorSwitcher> }
         <GridSwitcher></GridSwitcher>
         <SwitchButton></SwitchButton>
     </div>

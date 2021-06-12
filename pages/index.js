@@ -146,7 +146,7 @@ const Home = () => {
             <article className='paragraphsLeft'>
                 <div>
                     <h3 data-aos='fade-left'>My Desktop</h3>
-                    <img data-aos='fade-up' className='projectPictures' src='/images/db58485c536036cbd7cc389eae83cb10.webp'></img>
+                    <img data-aos='fade-up' alt='project pic' className='projectPictures' src='/images/db58485c536036cbd7cc389eae83cb10.webp'></img>
                 </div>
                 <div data-aos='fade-up'>
                     <p>Un portfolio version os mac.</p>
