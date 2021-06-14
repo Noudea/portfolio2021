@@ -44,15 +44,32 @@ const Home = () => {
                 font-weight: 300;
             }
 
-            .projectPictures {
-
-            }
             .work {
 
             }
 
             .projectPictures{
                 width : var(--columnWidth6);
+            }
+
+            .bookCoverPictures {
+                width :var(--columnWidth6);
+            }
+            
+            .lectureContainer {
+                display:flex;
+                flex-direction:column;
+            }
+
+            .paragraphsPassion {
+                width:var(--columnWidth6);
+            }
+            .passionDescription {
+                width:var(--columnWidth6);
+            }
+
+            .passionDescription p {
+                margin-top:0px;
             }
 
             @media screen and (min-width: 768px) {
@@ -95,6 +112,21 @@ const Home = () => {
                 }
                 .projectPictures {
                     width : var(--columnWidth3);
+                }
+
+                
+                .lectureContainer {
+                    flex-direction:row;
+                }
+                .bookCoverPictures {
+                    width :var(--columnWidth2);
+                }
+                .paragraphsPassion {
+                    width:var(--columnWidth6);
+                }
+                .passionDescription {
+                    margin-left:var(--columnWidth1);
+                    width:var(--columnWidth2);
                 }
 
             }
@@ -158,7 +190,56 @@ const Home = () => {
                 </div>
             </article>
         </section>
-        <div style={{height:'550px'}}></div>
+        <section className='passion'>
+            <h2>Passions</h2>
+            <article className='paragraphsPassion'>
+                <h3 data-aos='fade-right'>Lecture</h3>
+                <div className='lectureContainer'>
+                    <div>
+                        <img data-aos='fade-up' className='bookCoverPictures' src='/images/fondationCover.jpg'></img>
+                    </div>
+                    <div className='passionDescription'>
+                        <div data-aos='fade-up'>
+                            <p>Mon livre préféré de science fiction, écrit par Isaac Asimov</p>
+                        </div>
+                        <div data-aos='fade-up'>
+                            <p>C'est grâce à ce livre que j'ai découvert la science fiction et que je me suis attaché au genre.</p>
+                        </div>
+                        <div data-aos='fade-up'>
+                            <p>Synopsis : </p>
+                        </div>
+                        <div data-aos='fade-up'>
+                            <p>
+                                Dans Fondation d'Isaac Asimov, le psychohistorien Hari Seldon fait une prédiction : dans cinq cents ans, l'Empire Galactique s'effondrera et laissera place à 30.000 ans de guerre et de barbarie, mais, selon lui, il est possible de réduire cette période en un seul millénaire.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className='lectureContainer'>
+                    <div>
+                        <img data-aos='fade-up' className='bookCoverPictures' src='/images/elricCover.png'></img>
+                    </div>
+                    <div className='passionDescription'>
+                        <div data-aos='fade-up'>
+                            <p>Mon livre préféré de fantasy, écrit par Michael Moorcock's</p>
+                        </div>
+                        <div data-aos='fade-up'>
+                            <p>C'est grâce à ce livre que j'ai découvert la fantasy et que je me suis attaché au genre.</p>
+                        </div>
+                        <div data-aos='fade-up'>
+                            <p>Synopsis : </p>
+                        </div>
+                        <div data-aos='fade-up'>
+                            <p>
+                                Melniboné, l'île aux Dragons, régnait jadis sur le monde. Désormais les Dragons dorment et Melniboné dépérit. Sur le trône de Rubis siège Elric, le prince albinos, dernier de sa race, nourri de drogues et d'élixirs qui le maintiennent tout juste en vie. La menace plane ; alors il rend visite au Seigneur du Chaos, Arioch, et conclut un pacte avec lui. Il s'engage ainsi sur le chemin de l'éternelle aventure : le Navire des Terres et des Mers le porte à la cité pestilentielle de Dhozkam, et son destin le pousse à franchir la Porte des Ténèbres ; au-delà, deux épées noires attendent leur maître et leur victime...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+        <div style={{height:'1550px'}}></div>
     </>
   )
 }
